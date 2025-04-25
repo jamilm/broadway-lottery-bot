@@ -1,0 +1,33 @@
+# Broadway Lottery Bot Configuration
+
+# Credentials (can be overridden by environment variables)
+credentials:
+  username: ""  # Will be overridden by TELECHARGE_USERNAME env var
+  password: ""  # Will be overridden by TELECHARGE_PASSWORD env var
+
+# Scheduling
+schedule:
+  # Time to run the lottery entries (24-hour format)
+  time: "00:01"
+  # Randomize entry time within this window (in minutes) to appear more human-like
+  random_window_minutes: 30
+
+# Browser settings
+browser:
+  # Set to true to run in headless mode (no visible browser)
+  headless: true
+  # Timeout in seconds for page loads
+  timeout: 30
+  # User agent to use (leave empty for default)
+  user_agent: ""
+
+# URLs
+urls:
+  base: "https://rush.telecharge.com"
+  login: "https://rush.telecharge.com"  # Login is a modal on the main page
+  lotteries: "https://my.socialtoaster.com/st/lottery_select/?key=BROADWAY&source=iframe"
+
+# Logging
+logging:
+  level: "INFO"  # DEBUG, INFO, WARNING, ERROR, CRITICAL
+  file: "data/lottery_bot.log"

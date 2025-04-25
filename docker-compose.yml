@@ -1,0 +1,21 @@
+version: '3'
+
+services:
+  lottery-bot:
+    build: .
+    container_name: broadway-lottery-bot
+    environment:
+      - TELECHARGE_USERNAME=${TELECHARGE_USERNAME}
+      - TELECHARGE_PASSWORD=${TELECHARGE_PASSWORD}
+      - TELECHARGE_FIRST_NAME=${TELECHARGE_FIRST_NAME}
+      - TELECHARGE_LAST_NAME=${TELECHARGE_LAST_NAME}
+      - TELECHARGE_EMAIL=${TELECHARGE_EMAIL}
+      - TELECHARGE_ZIP_CODE=${TELECHARGE_ZIP_CODE}
+      - TELECHARGE_PHONE=${TELECHARGE_PHONE}
+      - RUNNING_IN_DOCKER=true
+    volumes:
+      - lottery-data:/app/data
+    restart: unless-stopped
+
+volumes:
+  lottery-data:
