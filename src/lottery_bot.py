@@ -24,9 +24,6 @@ class LotteryBot:
         # Get credentials from environment variables or config
         self.username = self.config['credentials']['username']
         self.password = self.config['credentials']['password']
-        
-        # Personal info for lottery entries
-        self.personal_info = config['personal_info']
 
     def login(self):
         """Log in to the Telecharge website using the modal login form."""

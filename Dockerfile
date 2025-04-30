@@ -8,6 +8,7 @@ RUN apt-get update && apt-get install -y \
     xvfb \
     libxi6 \
     libgconf-2-4 \
+    curl \
     && apt-get clean
 
 # Install Chrome

@@ -51,18 +51,6 @@ def main():
     if os.environ.get('TELECHARGE_PASSWORD'):
         config['credentials']['password'] = os.environ.get('TELECHARGE_PASSWORD')
     
-    # Personal info
-    if os.environ.get('TELECHARGE_FIRST_NAME'):
-        config['personal_info']['first_name'] = os.environ.get('TELECHARGE_FIRST_NAME')
-    if os.environ.get('TELECHARGE_LAST_NAME'):
-        config['personal_info']['last_name'] = os.environ.get('TELECHARGE_LAST_NAME')
-    if os.environ.get('TELECHARGE_EMAIL'):
-        config['personal_info']['email'] = os.environ.get('TELECHARGE_EMAIL')
-    if os.environ.get('TELECHARGE_ZIP_CODE'):
-        config['personal_info']['zip_code'] = os.environ.get('TELECHARGE_ZIP_CODE')
-    if os.environ.get('TELECHARGE_PHONE'):
-        config['personal_info']['phone'] = os.environ.get('TELECHARGE_PHONE')
-    
     logger.info("Starting Broadway Lottery Bot test")
     
     try:

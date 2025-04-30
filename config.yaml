@@ -10,7 +10,7 @@ schedule:
   # Time to run the lottery entries (24-hour format)
   time: "00:01"
   # Randomize entry time within this window (in minutes) to appear more human-like
-  random_window_minutes: 30
+  random_window_minutes: 1
 
 # Browser settings
 browser:
